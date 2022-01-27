@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, memo } from 'react';
 import { Animated, Text, StyleSheet } from 'react-native';
 
-function Button({ title, selected, index, change }) {
+function Button({ title, selected, index, onChange }) {
     const animateSelection = useRef(new Animated.Value(0)).current;
     const click = () => {
-        change(index)
+        onChange(index)
     }
     useEffect(() => {
         Animated.timing(
